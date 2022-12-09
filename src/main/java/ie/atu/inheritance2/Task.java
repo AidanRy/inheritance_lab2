@@ -5,6 +5,10 @@ import java.util.Scanner;
 
 public class Task {
     public static void main(String[] args) {
+        PreferedCustomer customer2 = new PreferedCustomer("tom","clare","08796","8587484hf",true,0,987);
+        float discount = customer2.DiscountCalc(customer2.getSpendTotal());
+        customer2.setDiscount(discount);
+        System.out.println(customer2);
         PreferedCustomer customer1 = new PreferedCustomer();
         Scanner input = new Scanner(System.in);
         System.out.println("Please Enter customer name: ");
@@ -37,7 +41,7 @@ public class Task {
         float spendTotal = input.nextFloat();
         customer1.setSpendTotal(spendTotal);
 
-        float discount = customer1.DiscountCalc(spendTotal);
+        float discount1 = customer1.DiscountCalc(spendTotal);
         customer1.setDiscount(discount);
 
         System.out.println(customer1);
